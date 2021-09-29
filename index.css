@@ -1,0 +1,32 @@
+.bordered {
+    border: thick dotted purple;
+}
+
+p {
+    border: thin solid rgb(255, 196, 0);
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+li {
+    color: rgb(199, 131, 255);
+    font-family: Comic Sans MS;
+
+}
+
+/* add a border around paragraphs and change their font to comic sans */
+p {
+    font-family: Comic Sans MS;
+    border: thin solid black;
+}
+
+/* give divs a different background color */
+div {
+    background-color: rgb(255, 168, 209);    /* this is a real named color in CSS! */
+}
