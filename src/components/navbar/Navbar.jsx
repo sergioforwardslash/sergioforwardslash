@@ -25,9 +25,9 @@ const Navbar = () => {
         <li>
           <a href="/skills">Skills</a>
         </li>
-        <li>
+        {/* <li>
           <a href="/work">Work</a>
-        </li>
+        </li> */}
         <li>
           <a href="/contact">Contact</a>
         </li>
@@ -37,41 +37,39 @@ const Navbar = () => {
         {!nav ? <FaBars /> : <FaTimes />}
       </div>
 
-      <div>
-        <ul
-          className={
-            !nav
-              ? "hidden"
-              : "absolute top-0 left-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center"
-          }
-        >
-          <li className="py-6 text-4xl">
-            <a href="/" onClick={handleClick}>
-              Home
-            </a>
-          </li>
-          <li className="py-6 text-4xl">
-            <a href="/about" onClick={handleClick}>
-              About
-            </a>
-          </li>
-          <li className="py-6 text-4xl">
-            <a href="/skills" onClick={handleClick}>
-              Skills
-            </a>
-          </li>
-          <li className="py-6 text-4xl">
-            <a href="/work" onClick={handleClick}>
-              Work
-            </a>
-          </li>
-          <li className="py-6 text-4xl">
-            <a href="/contact" onClick={handleClick}>
-              Contact
-            </a>
-          </li>
-        </ul>
-      </div>
+      <ul
+        className={
+          !nav
+            ? "hidden"
+            : "absolute top-0 left-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center"
+        }
+      >
+        <li className="py-6 text-4xl">
+          <a href="/" onClick={handleClick}>
+            Home
+          </a>
+        </li>
+        <li className="py-6 text-4xl">
+          <a href="/about" onClick={handleClick}>
+            About
+          </a>
+        </li>
+        <li className="py-6 text-4xl">
+          <a href="/skills" onClick={handleClick}>
+            Skills
+          </a>
+        </li>
+        <li className="py-6 text-4xl">
+          <a href="/work" onClick={handleClick}>
+            Work
+          </a>
+        </li>
+        <li className="py-6 text-4xl">
+          <a href="/contact" onClick={handleClick}>
+            Contact
+          </a>
+        </li>
+      </ul>
 
       <div className="hidden lg:flex fixed flex-col top-[35%] left-0">
         <ul>

@@ -17,13 +17,15 @@ const Home = () => {
           designing) exceptional digital experiences. Currently, I’m focused on
           building responsive full-stack web applications.
         </p>
-        <div>
-          <button className="text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-[#cb6ce6] hover:border-[#cb6ce6]">
-            View Work
-            <span>
-              <HiArrowNarrowRight className="ml-3 " />
-            </span>
-          </button>
+        <div style={{ display: "inline-block" }}>
+          <a href="/skills" style={{ display: "inline-block" }}>
+            <button className="text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-[#cb6ce6] hover:border-[#cb6ce6]">
+              View Skills
+              <span>
+                <HiArrowNarrowRight className="ml-3 " />
+              </span>
+            </button>
+          </a>
         </div>
       </div>
     </div>
