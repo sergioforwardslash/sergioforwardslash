@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useRef, useState } from "react";
+import { ThreeDots } from "react-loader-spinner";
 
 const Contact = () => {
   const form = useRef();
@@ -8,6 +9,8 @@ const Contact = () => {
     email: "",
     message: "",
   });
+  const [isLoading, setIsLoading] = useState(false);
+  const [submissionStatus, setSubmissionStatus] = useState(null);
 
   const handleChange = (event) => {
     setFormData({
@@ -18,6 +21,7 @@ const Contact = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    setIsLoading(true);
 
     try {
       const res = await axios.post(
@@ -29,8 +33,12 @@ const Contact = () => {
         email: "",
         message: "",
       });
+      setIsLoading(false);
+      setSubmissionStatus("Success");
     } catch (e) {
       console.log(e.res.data.error);
+      setIsLoading(false);
+      setSubmissionStatus("Error");
     }
   };
 
@@ -50,7 +58,7 @@ const Contact = () => {
             Contact
           </p>
           <p className="text-gray-300 py-4">
-            // Submit the form below or shoot me an email -{" "}
+            // Submit the form below or send me an email -{" "}
             <a href="mailto:schairez2@ucmerced.edu">schairez2@ucmerced.edu</a>
           </p>
         </div>
@@ -81,8 +89,25 @@ const Contact = () => {
           onChange={handleChange}
           required
         ></textarea>
-        <button className="text-white border-2 hover:bg-pink-600 hover:border-pink-600 px-4 py-3 my-8 mx-auto flex items-center">
-          Let's Collaborate
+        {submissionStatus === "success" && (
+          <div><p className="text-green-500 text-center">
+            Your message was sent successfully!
+          </p></div>
+        )}
+        {submissionStatus === "error" && (
+          <p className="text-red-500 text-center">
+            Oops! There was an error sending your message. Please try again.
+          </p>
+        )}
+        <button
+          className="text-white border-2 hover:bg-pink-600 hover:border-pink-600 px-4 py-3 my-8 mx-auto flex items-center"
+          disabled={isLoading}
+        >
+          {isLoading ? (
+            <ThreeDots color="#ffffff" height={20} width={20} timeout={30000} />
+          ) : (
+            "Lets Collaborate"
+          )}
         </button>
       </form>
     </div>
