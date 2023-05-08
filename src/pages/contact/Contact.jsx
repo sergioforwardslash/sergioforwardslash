@@ -21,7 +21,7 @@ const Contact = () => {
 
     try {
       const res = await axios.post(
-        "http://localhost:8001/api/contactme",
+        "https://sergioo.xyz/api/contactme",
         formData
       );
       setFormData({
