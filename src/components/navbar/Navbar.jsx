@@ -59,11 +59,11 @@ const Navbar = () => {
             Skills
           </a>
         </li>
-        <li className="py-6 text-4xl">
+        {/* <li className="py-6 text-4xl">
           <a href="/work" onClick={handleClick}>
             Work
           </a>
-        </li>
+        </li> */}
         <li className="py-6 text-4xl">
           <a href="/contact" onClick={handleClick}>
             Contact
