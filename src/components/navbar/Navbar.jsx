@@ -25,9 +25,9 @@ const Navbar = () => {
         <li>
           <a href="/skills">Skills</a>
         </li>
-        {/* <li>
+        <li>
           <a href="/work">Work</a>
-        </li> */}
+        </li>
         <li>
           <a href="/contact">Contact</a>
         </li>
@@ -59,11 +59,11 @@ const Navbar = () => {
             Skills
           </a>
         </li>
-        {/* <li className="py-6 text-4xl">
+        <li className="py-6 text-4xl">
           <a href="/work" onClick={handleClick}>
             Work
           </a>
-        </li> */}
+        </li>
         <li className="py-6 text-4xl">
           <a href="/contact" onClick={handleClick}>
             Contact
@@ -94,7 +94,7 @@ const Navbar = () => {
           <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#6fc2b0]">
             <a
               className="flex justify-between items-center w-full text-gray-300"
-              href="mailto:schairez2@ucmerced.edu"
+              href="mailto:sergio@artrid.net"
             >
               Email
               <HiOutlineMail size={30} />
@@ -104,7 +104,7 @@ const Navbar = () => {
             <a
               className="flex justify-between items-center w-full text-gray-300"
               target="_blank"
-              href="https://drive.google.com/file/d/1IJauF-JCy8y7Xry6RHZb95YdhTn_07R8/view?usp=sharing"
+              href="https://drive.google.com/file/d/1KOeNX3ChZkX2ldA0mB8eISIPBH6YbhY3/view?usp=sharing"
             >
               Resume <BsFillPersonLinesFill size={30} />
             </a>
